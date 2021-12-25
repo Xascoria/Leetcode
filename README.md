@@ -3,6 +3,6 @@
 Stats:
 ```
 Easy:    10
-Medium:  12
+Medium:  16
 Hard:     1
 ```

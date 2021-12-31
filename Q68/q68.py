@@ -3,7 +3,6 @@ from typing import List
 class Solution:
     def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:
         prev_index = 0
-        cur_index = 0
         cur_length = 0
         output = []
         for cur_index in range(len(words)):

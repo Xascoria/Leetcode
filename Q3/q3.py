@@ -17,7 +17,6 @@ class Solution:
             if end_index == start_index:
                 end_index += 1
                 if end_index == len(s):return output
-            print(start_index,end_index)
         return output
             
 x = Solution()

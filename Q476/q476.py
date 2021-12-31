@@ -8,9 +8,6 @@ class Solution:
         xor_val = 2**(math.ceil(log2_val)+log2_val.is_integer())-1
         return num ^ xor_val
 
-        print(bin(num))
-        print(bin(2**(math.ceil(log2_val)+log2_val.is_integer())-1))
-
 x = Solution()
 res = x.findComplement(4)
 print(res)

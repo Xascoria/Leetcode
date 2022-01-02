@@ -3,7 +3,7 @@
 Stats:
 ```
 Easy:    27
-Medium:  36
+Medium:  37
 Hard:     7
-Total:   70
+Total:   71
 ```

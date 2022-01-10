@@ -1,28 +1,26 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-from random import randrange
-
 class Solution:
-    def __init__(self, head: Optional[ListNode]):
-        self.head = head
+    def firstUniqChar(self, s: str) -> int:
+        char_dict = {}
+        for i,j in enumerate(s):
+            if j not in char_dict:
+                char_dict[j] = (1, i)
+            else:
+                char_dict[j] = (char_dict[j][0]+1, char_dict[j][1])
+        for i in char_dict:
+            if char_dict[i][0] == 1:
+                return char_dict[i][1]
+        return -1
 
-    def getRandom(self) -> int:
-        current_index = 2
-        current_val = self.head.val
-        current_node = self.head.next
-        while current_node != None:
-            if randrange(current_index) == 1:
-                current_val = current_node.val
-                
-            current_node = current_node.next
-            current_index += 1
-        return current_val
-        
-
-
-# Your Solution object will be instantiated and called as such:
-# obj = Solution(head)
-# param_1 = obj.getRandom()
+## Alternate
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        char_dict = {}
+        for i in s:
+            if i not in char_dict:
+                char_dict[i] = 1
+            else:
+                char_dict[i] += 1
+        for i in char_dict:
+            if char_dict[i] == 1:
+                return s.index(i)
+        return -1

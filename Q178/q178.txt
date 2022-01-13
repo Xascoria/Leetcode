@@ -1,0 +1,6 @@
+/* Write your PL/SQL query statement below */
+
+SELECT s2.score, it.rank FROM Scores s2 JOIN 
+(SELECT ROWNUM AS rank, score FROM 
+ (SELECT s.score FROM Scores s GROUP BY score ORDER BY score DESC)) it
+ON s2.score = it.score;

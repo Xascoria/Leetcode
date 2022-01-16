@@ -1,0 +1,2 @@
+
+SELECT email FROM (SELECT p.email, COUNT(*) AS occur FROM Person p GROUP BY p.email) WHERE occur > 1;

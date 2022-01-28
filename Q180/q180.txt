@@ -1,0 +1,4 @@
+/* Write your PL/SQL query statement below */
+SELECT l.num AS ConsecutiveNums FROM Logs l WHERE l.id+1 IN 
+(SELECT l2.id FROM Logs l2 WHERE l2.num = l.num) AND
+l.id+2 IN (SELECT l3.id FROM Logs l3 WHERE l3.num = l.num) GROUP BY l.num;

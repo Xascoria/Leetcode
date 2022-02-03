@@ -2,8 +2,8 @@
 
 Stats:
 ```
-Easy:    105
-Medium:  107
+Easy:    106
+Medium:  109
 Hard:     15
-Total:   227
+Total:   230
 ```
